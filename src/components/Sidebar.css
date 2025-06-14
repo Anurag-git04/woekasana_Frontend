@@ -1,0 +1,100 @@
+.sidebar-container {
+  width: 20%; 
+  background-color: #ffffff; 
+  height: 100vh; 
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08); 
+  display: flex; 
+  flex-direction: column; 
+  left: 0;
+  top: 0;
+  /* z-index: 1000;  */
+}
+
+.sidebar-header {
+  padding: 0 20px 30px; /* Direct padding values */
+  text-align: center;
+}
+
+.sidebar-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0; /* Essential for removing default browser margins */
+  font-weight: 600; /* Standard font weight */
+}
+
+/* Navigation List: Clean up default list styles */
+.sidebar-nav ul {
+  list-style: none; /* No bullets */
+  padding: 0; /* No default padding */
+  margin: 0; /* No default margin */
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 5px; /* Consistent spacing between items */
+}
+
+/* Navigation Link: Core styling for interactive elements */
+.sidebar-nav .nav-link {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Vertical centering */
+  padding: 12px 20px; /* Consistent inner padding */
+  color: #555; /* Default text color */
+  text-decoration: none; /* No underlines */
+  font-size: 16px;
+  transition: background-color 0.15s ease, color 0.15s ease; /* Fast, simple transition for responsiveness */
+  border-radius: 8px; /* Smooth corners */
+  margin: 0 10px; /* Horizontal margin for visual spacing */
+}
+
+.sidebar-nav .nav-link:hover {
+  background-color: #f0f0f0; /* Simple background change on hover */
+  color: #333;
+}
+
+/* Active Navigation Item: Distinct style for current selection */
+.sidebar-nav .nav-item.active .nav-link {
+  background-color: #e6e6fa; /* Solid color, no gradients */
+  color: #6a5acd;
+  font-weight: 600;
+}
+
+/* Icon Placeholders: Minimal styling for icons */
+.sidebar-nav .nav-link i {
+  margin-right: 10px; /* Spacing for text */
+  font-size: 18px; /* Icon size */
+}
+
+/* Example: Basic icon styles using content property (Unicode emojis are simple) */
+.icon-dashboard::before { content: '📊'; }
+.icon-project::before { content: '📁'; }
+.icon-team::before { content: '👥'; }
+.icon-reports::before { content: '📈'; }
+.icon-setting::before { content: '⚙️'; }
+
+/* Responsive Adjustments: Use simple changes for mobile if needed */
+/* Remove or simplify if responsive behavior is not a primary concern for "loading" */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 60px; /* Reduce width */
+  }
+
+  .sidebar-header h1 {
+    display: none; /* Hide text */
+  }
+
+  .sidebar-nav .nav-link {
+    justify-content: center; /* Center icons */
+    padding: 12px; /* Adjust padding */
+  }
+
+  /* Assuming you wrap text in span in Sidebar.jsx for easier hiding */
+  .sidebar-nav .nav-link span {
+    display: none; /* Hide text */
+  }
+
+  .sidebar-nav .nav-link i {
+    margin-right: 0; /* No margin if text is hidden */
+  }
+}
+
