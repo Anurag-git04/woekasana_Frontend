@@ -2,6 +2,8 @@ import { createContext, useState } from "react";
 
 const WorkContext = createContext();
 
+export default WorkContext
+
 const WorkProviderComponent = ({ children }) => {
   const [log, setLogged] = useState(false);
 
@@ -48,4 +50,4 @@ const WorkProviderComponent = ({ children }) => {
   );
 };
 
-export { WorkContext, WorkProviderComponent };
+export { WorkProviderComponent }
