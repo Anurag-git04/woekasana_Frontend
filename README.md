@@ -7,11 +7,19 @@ Workasana is a project and task management web application built using the **Rea
 
 
 ---
-
 ## 📁 Project Structure
 
-<pre> src/ │ ├── components/ # Reusable UI components (e.g., Header) ├── context/ # WorkContext for global state and API calls ├── pages/ # Application pages (Login, Dashboard, Project, etc.) ├── App.js # Main app and routing logic └── index.js # React root entry </pre>
+<pre>
+src/
+│
+├── components/         # Reusable UI components (e.g., Header)
+├── context/            # WorkContext for global state and API calls
+├── pages/              # Application pages (Login, Dashboard, Project, etc.)
+├── App.js              # Main app and routing logic
+└── index.js            # React root entry
+</pre>
 
+---
 
 ---
 
