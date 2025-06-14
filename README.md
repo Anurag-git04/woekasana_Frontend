@@ -54,34 +54,24 @@ src/
 - Node.js (v16 or later)
 - npm / yarn
 
+
 ### Installation
 
 1. **Clone the Repository**
+
 ```bash
 git clone https://github.com/Anurag-git04/woekasana_Frontend.git
 cd woekasana_Frontend
-🧑‍💻 Getting Started
-📦 Install Dependencies
-bash
-Copy
-Edit
 npm install
 # or
 yarn install
-🚀 Start the Development Server
-bash
-Copy
-Edit
 npm run dev
 # or
 yarn dev
-The app will be available at:
-👉 http://localhost:5173 (default Vite port)
-
-🔗 Backend API
-This frontend consumes APIs from the Workasana Backend(https://github.com/Anurag-git04/workasanaBackend.git), which must be running and accessible for the application to function properly.
-
-📸 Loom Video: Loom video:
+```
+### 📸 Loom Video Walkthrough
 https://drive.google.com/file/d/1H1by4NN4Nf3VECB9xf8kkYZPBpnuQ0FO/view?usp=sharing
 
-```
+### Sample Login
+email :anurag@gmail.com
+password : 123456
