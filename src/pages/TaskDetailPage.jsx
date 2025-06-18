@@ -12,6 +12,7 @@ const TaskDetailPage = () => {
       try {
         const res = await fetch(`https://workasana-backend-ecru.vercel.app/tasksbyid/${id}`)
         const data = await res.json()
+        console.log("Task Details data : ",data)
         setTaskDetail(data.data)
       } catch (error) {
         console.error('Error fetching task:', error)
@@ -57,7 +58,7 @@ const TaskDetailPage = () => {
           <p><strong>Project:</strong> {taskData.project?.name}</p>
           <p><strong>Time to Complete:</strong> {taskData.timeToComplete} days</p>
           <p><strong>Created At:</strong> {new Date(taskData.createdAt).toLocaleString()}</p>
-          <p><strong>Owners:</strong> {taskData.owners?.map(owner => owner.name).join(', ')}</p>
+          <p><strong>Owners:</strong> {taskData.owners.map(owner => owner.name).join(', ')}</p>
         </div>
       </main>
     </div>

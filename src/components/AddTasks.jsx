@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import WorkContext from '../context/WorkContext'
+import { toast } from 'react-toastify';
 
 const AddTasks = () => {
   const { fetchData, fetchTeam } = useContext(WorkContext)
@@ -58,6 +59,7 @@ const AddTasks = () => {
 
       if (res.ok) {
         alert('Task created successfully')
+        toast.success("New Task created successfully")
         setForm({
           name: '',
           project: '',
@@ -68,7 +70,7 @@ const AddTasks = () => {
           status: 'To Do'
         })
       } else {
-        alert(data.message)
+        toast.error(data.message)
       }
     } catch (error) {
       console.error('Error submitting task:', error)

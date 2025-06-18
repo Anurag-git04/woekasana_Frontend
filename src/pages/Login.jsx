@@ -4,6 +4,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import WorkContext from '../context/WorkContext';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [isLogin,setLogin] = useState(true)
@@ -32,7 +33,8 @@ const Login = () => {
             const data = await res.json()
             if(res.ok){
                 localStorage.setItem('token',data.token)
-                alert('Login Successfully')
+                // alert('Login Successfully')
+                toast.success('Login Successfully')
                 setLogged(true)
                 navigate('/DashBoard')
             }

@@ -114,12 +114,15 @@
     gap: 25px;  */
     display: flex;
     gap: 20px;
+    width: 90%;
+    margin-bottom: 5px;
 }
 
 .project-card {
-    background-color: #dcdada;
+    background-color: #fff;
     border-radius: 3px; /* More rounded corners */
     padding: 25px;
+    border: 1px solid black;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
@@ -171,6 +174,7 @@
     background-color: #e0f7e9; /* Light green */
     color: #2e7d32; /* Darker green text */
 }
+
 
 .table-wrapper {
   padding: 24px;
@@ -229,6 +233,7 @@
   border-radius: 9999px;
   font-weight: 600;
   display: inline-block;
+  width: 45%;
 }
 
 .status.completed {

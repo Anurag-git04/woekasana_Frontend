@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const AddProject = () => {
     const [projectname, setPrjectName] = useState('')
@@ -24,10 +25,12 @@ const AddProject = () => {
             })
             const result = await res.json()
             if(result.ok){
-                alert('New Project is added successfully')
+                // alert('New Project is added successfully')
+                toast.success("Projected Added")
                 navigate('/DashBoard')
             }else{
-                alert(result.message || 'Error adding task');
+                // alert(result.message || 'Error adding task');
+                toast.error(result.message)
             }
             
         } catch (error) {

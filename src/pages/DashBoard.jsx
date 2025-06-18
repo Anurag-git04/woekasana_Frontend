@@ -71,7 +71,7 @@ const DashBoard = () => {
             {
               taskData.map((task)=>(
                 <div className='project-card' onClick={(e)=>navi(task)}>
-                  <div className="project-Status">{task.status}</div>
+                  <div className={`status ${task.status.replace(' ', '-').toLowerCase()}`}>{task.status}</div>
                   <h3>{task.name}</h3>
                   <p><strong>Project: </strong>{task.project.name}</p>
                 </div>
